@@ -40,6 +40,7 @@ Document Table of Contents
     - [placement](#placement)
     - [recover](#recover)
     - [restart](#restart)
+    - [status](#status)
     - [suffix](#suffix)
     - [tune](#tune)
         - [Configuring databases](#configuring-databases)
@@ -108,9 +109,6 @@ Usage:
 
 Configure a specific endpoint's binding to proxies or change its binding policy.
 
-Example: : 
-    ``insert example``
-
 
 
 ---
@@ -153,8 +151,9 @@ cm_port | UI server listening port|
 |min_data_TLS_version | The minimum version of TLS protocol which is supported at the data path.|
 
 ---
-*If node is not yet configured as part of a cluster:*
 
+
+*If node is not yet configured as part of a cluster:*
 ---
 ### cluster create 
 
@@ -251,9 +250,9 @@ When recovering a cluster, it is mandatory to specify the filename: the location
 
 The following parameters are optional:
 
-The **persistent_path** path parameter specifies a path for persistent storage (default location: /var/opt/redislabs/persist), while the ephemeral_path path parameter specifies a path ephemeral storage (default location: /var/opt/redislabs).
+The **persistent_path** path parameter specifies a path for persistent storage (default location: /var/opt/redislabs/persist), while the **ephemeral_path** path parameter specifies a path ephemeral storage (default location: /var/opt/redislabs).
 
-If rack awareness is enabled in the cluster you can override the rack ID by supplying a different rack_id and providing the **override_rack_id** flag, otherwise the existing value will be kept.
+If rack awareness is enabled in the cluster you can override the rack ID by supplying a different **rack_id** and providing the **override_rack_id** flag, otherwise the existing value will be kept.
 
 **node_uid** lets you specify which node will be the first to be recovered and take the role of the master in the recovered cluster. If not specified defaults to 1.
 
@@ -419,7 +418,7 @@ The **discard_data** optional flag indicates that the data can be discarded and 
 The **force_discard** optional flag indicates we force discard_data even if there is replication or persistence.
 
 ---
-##status
+## status
 
 Usage:
 
