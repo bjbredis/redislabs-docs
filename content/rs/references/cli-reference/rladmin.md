@@ -78,22 +78,25 @@ In the rladmin CLI you can:
 
 # rladmin usage
 
--  [**bind**](#bind)      Bind an endpoint
--  [**cluster**](#cluster)   Cluster management commands
--  **exit**      Exit admin shell
--  [**failover**](#failover)  Fail-over master to slave
--  **help**      Show available commands, or use ```help <command>``` for a specific command
--  [**info**](#info)    Show information about tunable parameters
--  [**migrate**](#migrate)   Migrate elements between nodes
--  [**node**](#node)      Node management commands
--  [**placement**](#placement) Configure shards placement policy
--  [**recover**](#recover)   Recover databases
--  [**restart**](#restart)   Restart database shards
--  [**status**](#status)    Show status information
--  [**suffix**](#suffix)    Suffix management
--  [**tune**](#tune)      Tune system parameters
--  [**upgrade**](#upgrade)   Upgrade entity version
--  [**verify**](#verify)    Cluster verification reports
+| Command | Description |
+|-|-|
+|[**bind**](#bind) |     Bind an endpoint|
+|[**cluster**](#cluster) |  Cluster management commands|
+|[**failover**](#failover)|  Fail-over master to slave|
+|[**info**](#info)  |  Show information about tunable parameters|
+|[**migrate**](#migrate)  | Migrate elements between nodes|
+|[**node**](#node)   |   Node management commands|
+|[**placement**](#placement)| Configure shards placement policy|
+|[**recover**](#recover)|   Recover databases|
+|[**restart**](#restart) |  Restart database shards|
+|[**status**](#status) |   Show status information|
+|[**suffix**](#suffix) |   Suffix management|
+|[**tune**](#tune) |     Tune system parameters|
+|[**upgrade**](#upgrade)|   Upgrade entity version|
+|[**verify**](#verify) |   Cluster verification reports|
+|**help**     | Show available commands, or use ```help <command>``` for a specific command|
+|**exit**    |  Exit admin shell|
+
 
 
 
@@ -102,8 +105,7 @@ In the rladmin CLI you can:
 
 Usage:
     
-    bind [db <db:id | name>] endpoint <id> 
-    [ include | exclude ] proxy <id1 .. idN>
+    bind [db <db:id | name>] endpoint <id> [ include | exclude ] proxy <id1 .. idN>
     
     bind [db <db:id | name>] endpoint <id> policy <single | all-master-shards | all-nodes>
 
